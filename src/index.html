@@ -3,20 +3,34 @@
 
 <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>BMI Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <script src="js/person.js"></script>
     <script src="js/calculator.js"></script>
 </head>
 
 <body>
-    <form id="calculate">
-        <div id="metric-inputs">
-            <input type="text" id="weight-in-kgs" placeholder="Weight">
-            <input type="text" id="height-in-cm" placeholder="Height">
-        </div>
+    <div class="w-full max-w-xs mt-32 mx-auto">
+        <form id="calculate" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <div class="mb-4">
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="weight-in-kgs">
+                    Weight
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" id="weight-in-kgs" placeholder="Weight">
+            </div>
+            <div class="mb-4">
+                <label class="block text-grey-darker text-sm font-bold mb-2" for="height-in-cm">
+                    Height
+                </label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker leading-tight focus:outline-none focus:shadow-outline" type="text" id="height-in-cm" placeholder="height">
+            </div>
 
-        <button type="submit" value="Calculate"> Calculate </button>
-    </form>
+            <button type="submit" value="Calculate" class="bg-blue hover:bg-blue-dark text-white font-bold py-2 px-4 rounded-full"> Calculate </button>
+        </form>
+    </div>
+
+
+
     <div>
         <span id="display_value"></span>
         <span id="display_message"></span>
